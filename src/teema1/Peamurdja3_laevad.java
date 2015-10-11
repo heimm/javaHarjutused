@@ -16,4 +16,23 @@ import java.util.Scanner;
  *    nii vertikaalselt kui ka horisontaalselt?
  */
 public class Peamurdja3_laevad {
+    public static void main(String[] args) {
+
+        int[] laud = {0, 1, 0, 0, 1, 1, 0, 0, 0}; //laevade asukohad - 1 on laev
+        System.out.println(Arrays.toString(laud));
+
+        Scanner kasutaja = new Scanner(System.in);
+        System.out.println("sisesta number");
+        int sisestus = kasutaja.nextInt()-1;
+
+        if (laud[sisestus]==1) {
+            System.out.println("Said pihta!");
+            laud[sisestus]=8;}
+
+        else {
+            System.out.println("mööda");
+        }
+        System.out.println(Arrays.toString(laud));
+    }
 }
+
